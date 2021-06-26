@@ -1,0 +1,22 @@
+<!-- extend base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Shoelace Formula</h1>
+<form action="" method="post" name="inform">
+    {{ form.hidden_tag() }}
+    <p>
+        Distance {{ form.mag(size=20) }}
+
+        north or south {{ form.ns() }}
+
+        degree {{ form.degree(size=3) }}&nbsp;&nbsp;&nbsp;&nbsp;
+
+        minute {{ form.minute(size=3) }}
+
+        west or east {{ form.ew() }}
+    </p>
+
+    <p><input type="submit" value="Submit"></p>
+</form>
+{% endblock %}
